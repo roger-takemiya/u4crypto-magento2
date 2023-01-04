@@ -124,8 +124,12 @@ class Pix extends \Magento\Payment\Model\Method\AbstractMethod
 
          $dueDate = $pixConfig['expiration_days'] * 86400; 
 
+         if ( empty($data['customer_taxvat']) ) {
+             return false;           
+         } 
 
-         $customer_taxvat = empty($data['customer_taxvat']) ? '06341433956' : $data['customer_taxvat'];
+         $customer_taxvat = $data['customer_taxvat'];
+
          $customer_taxvat = preg_replace("/[^0-9]/", "",  $customer_taxvat);
 
 
