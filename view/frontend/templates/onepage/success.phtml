@@ -1,0 +1,26 @@
+
+<?php if($this->canShowBillet()): ?>
+	<br />
+	<button id="u4crypto-boleto-button-print" type="button" class="action primary checkout" title="Print Billet" onclick="window.open('<?php echo $block->getBilletPrintUrl() ?>', '_blank')"><?php echo __('Print your Boleto') ?></button>
+<?php endif; ?>
+
+
+<?php if($this->canShowPix()): ?>
+
+	<?php $pix = $this->getPixData(); ?>
+
+	<?php if($pix){ ?>
+		<br>
+		<label><b>QR CODE</b></label>
+		<br>
+ 		<img style="display:inline-block;max-width:240px" src="data:image/png;base64, <?php echo $pix->data->generatedImage->imageContent ?>" alt="PIX" /><br><br>
+
+ 		<label>Copie e Cole para Pagar o PIX</label>
+ 		<br>
+ 		<textarea onfocus="this.select();" onmouseup="return false;" style="width:100%;height:50px">
+ 			<?php echo $pix->data->textContent ?>
+ 		</textarea>
+
+	<?php } ?>
+
+<?php endif; ?>

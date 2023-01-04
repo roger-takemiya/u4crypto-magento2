@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<u4crypto_billet>
+				<active>1</active>
+				<model>Takemiya\U4crypto\Model\Payment\Billet</model>
+				<order_status>pending</order_status>
+				<title>Billet</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</u4crypto_billet>
+			<u4crypto_pix>
+				<active>1</active>
+				<model>Takemiya\U4crypto\Model\Payment\Pix</model>
+				<order_status>pending</order_status>
+				<title>Pix</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</u4crypto_pix>
+			<u4crypto_creditcard>
+				<active>1</active>
+				<model>Takemiya\U4crypto\Model\Payment\Creditcard</model>
+				<order_status>pending</order_status>
+				<title>Creditcard</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</u4crypto_creditcard>
+		</payment>
+		<general>
+			<general>
+				<enable/>
+			</general>
+		</general>
+	</default>
+</config>

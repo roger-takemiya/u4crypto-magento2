@@ -1,0 +1,11 @@
+<?php if( $block->isBillet() ){ ?>
+	<?php $link = $block->getBilletLink(); ?>
+	<?php if($link){ ?>
+		<a href="<?= $block->escapeUrl($link) ?>"
+		   class="action print billet-link"
+		   target="_blank"
+		   rel="noopener">
+		    <span><?= $block->escapeHtml(__('Print Billet')) ?></span>
+		</a>
+	<?php } ?>
+<?php } ?>

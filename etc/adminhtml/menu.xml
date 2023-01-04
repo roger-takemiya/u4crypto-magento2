@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Takemiya::top_level" title="U4crypto" module="Takemiya_U4crypto" sortOrder="9999" resource="Magento_Backend::content"/>
+
+		<add id="Takemiya_U4crypto::takemiya_u4crypto_u4cryptotransaction" title="Transactions History" module="Takemiya_U4crypto" sortOrder="9999" resource="Magento_Backend::content" parent="Takemiya::top_level" action="takemiya_u4crypto/u4cryptotransaction/index"/>
+
+	
+		
+	</menu>
+</config>

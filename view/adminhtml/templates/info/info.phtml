@@ -1,0 +1,15 @@
+
+<?php $info = $block->getU4cryptotransaction(); ?>
+
+<?php if ($info) : ?>
+    <div class="admin__page-section-item-content">
+	    <br />
+	   	<b><?php echo __('Transaction'); ?>:</b> <?php echo $info['transaction'] ?> <br /><br />
+	   	<b><?php echo __('Billet Id'); ?>:</b> <?php echo $info['billet_id'] ?> <br /><br />
+
+	    <label><b><?php echo __('Billet Code'); ?>:</b></label>
+	    <textarea onfocus="this.select();" onmouseup="return false;" style="width:100%;height:50px"><?php echo $info['billet'] ?></textarea>
+	    <br /><br />
+	    <button id="u4crypto-boleto-button-print" type="button" class="action" title="Print U4crypto Boleto" onclick="window.open('<?php echo $info['billet_link'] ?>', '_blank')"><?php echo __('Print your Boleto') ?></button>
+    </div>
+<?php endif; ?>

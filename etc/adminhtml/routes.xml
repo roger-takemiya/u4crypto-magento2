@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="takemiya_u4crypto" id="takemiya_u4crypto">
+			<module before="Magento_Backend" name="Takemiya_U4crypto"/>
+		</route>
+	</router>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="takemiya_u4crypto_u4cryptotransaction" resource="default" engine="innodb" comment="takemiya_u4crypto_u4cryptotransaction Table">
+		<column xsi:type="smallint" name="u4cryptotransaction_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="u4cryptotransaction_id"/>
+		</constraint>
+		<column name="transaction" nullable="true" xsi:type="text" comment="transaction"/>
+		<column name="billet_id" nullable="true" xsi:type="text" comment="billet_id"/>
+		<column name="billet" nullable="true" xsi:type="text" comment="billet"/>
+		<column name="created_at" nullable="true" xsi:type="datetime" comment="created_at"/>
+		<column name="updated_at" nullable="true" xsi:type="datetime" comment="updated_at"/>
+		<column name="customer_id" nullable="true" xsi:type="int" comment="customer_id" identity="false"/>
+		<column name="documentnumber" nullable="true" xsi:type="varchar" comment="documentnumber" length="255"/>
+		<column name="order_id" nullable="true" xsi:type="int" comment="order_id" identity="false"/>
+		<column name="billet_link" nullable="true" xsi:type="varchar" comment="billet_link" length="255"/>
+	</table>
+</schema>

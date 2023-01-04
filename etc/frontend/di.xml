@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+
+     <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+
+        	 <argument name="configProviders" xsi:type="array">
+                <item name="takemiya_u4crypto_config_provider" xsi:type="object">Takemiya\U4crypto\Model\Ui\Billet\ConfigProvider</item>
+                <item name="u4crypto_pix_config_provider" xsi:type="object">Takemiya\U4crypto\Model\Ui\Pix\ConfigProvider</item>
+                <item name="u4crypto_creditcard_config_provider" xsi:type="object">Takemiya\U4crypto\Model\Ui\Creditcard\ConfigProvider</item>
+            </argument>
+
+        </arguments>
+    </type>
+
+
+
+</config>

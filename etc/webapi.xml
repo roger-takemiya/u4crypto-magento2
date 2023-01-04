@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/takemiya-u4crypto/orderstatus" method="POST">
+		<service class="Takemiya\U4crypto\Api\OrderStatusManagementInterface" method="postOrderStatus"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route url="/V1/takemiya-u4crypto/u4cryptotransaction" method="POST">
+		<service class="Takemiya\U4crypto\Api\U4cryptotransactionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Takemiya_U4crypto::U4cryptotransaction_save"/>
+		</resources>
+	</route>
+	<route url="/V1/takemiya-u4crypto/u4cryptotransaction/search" method="GET">
+		<service class="Takemiya\U4crypto\Api\U4cryptotransactionRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Takemiya_U4crypto::U4cryptotransaction_view"/>
+		</resources>
+	</route>
+	<route url="/V1/takemiya-u4crypto/u4cryptotransaction/:u4cryptotransactionId" method="GET">
+		<service class="Takemiya\U4crypto\Api\U4cryptotransactionRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Takemiya_U4crypto::U4cryptotransaction_view"/>
+		</resources>
+	</route>
+	<route url="/V1/takemiya-u4crypto/u4cryptotransaction/:u4cryptotransactionId" method="PUT">
+		<service class="Takemiya\U4crypto\Api\U4cryptotransactionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Takemiya_U4crypto::U4cryptotransaction_update"/>
+		</resources>
+	</route>
+	<route url="/V1/takemiya-u4crypto/u4cryptotransaction/:u4cryptotransactionId" method="DELETE">
+		<service class="Takemiya\U4crypto\Api\U4cryptotransactionRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Takemiya_U4crypto::U4cryptotransaction_delete"/>
+		</resources>
+	</route>
+	
+</routes>
